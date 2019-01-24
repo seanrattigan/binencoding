@@ -34,7 +34,6 @@ def encode(plaintext):
         pass
 
 
-
 def decode(cyphertext):
     """
     (str)->str
@@ -44,7 +43,13 @@ def decode(cyphertext):
     >>> encode('1000010/1000001/1100100')
     'bad
     """
-    pass
+    if len(cyphertext) < 1:
+        print("No data detected!")
+        return ""
+    if type(cyphertext) != str:
+        raise TypeError("Non-str object cannot be encoded!")
+    else:
+        pass
 
 # main body
 
