@@ -42,4 +42,11 @@ def decode(cyphertext):
 # main body
 
 if __name__ == "__main__":
-    pass
+    a1 = encode("a")
+    print(a1)
+    a2 = encode("abc")
+    print(a2)
+    a3 = encode("The cat sat on the mat")
+    print(a3)
+    a4 = encode("A cat ate 5 eggs @ 10:45!")
+    print(a4)
