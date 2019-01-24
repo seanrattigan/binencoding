@@ -17,6 +17,14 @@ import bincode
 
 
 # functions
+def get_string(opt="encode"):
+    """
+    (None)->str
+    Gets a string from the user and returns it
+    Takes an optional arguement that the caller can set
+    """
+    text = input(f"Enter string to {opt}: ")
+    return text
 
 
 # main body
@@ -26,7 +34,9 @@ if __name__ == "__main__":
     while True:
         response = bin_menu.display()
         if response == 0:
-            print("Encode called")
+            print("Encode to binary called")
+            cyph = bincode.encode(get_string("encode text to binary"))
+            print(cyph)
         elif response == 1:
             print("Decode called")
         elif response == 2:
