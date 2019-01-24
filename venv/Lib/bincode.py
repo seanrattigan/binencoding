@@ -54,15 +54,15 @@ def decode(cyphertext):
         return plain
     else:
         bitlist = cyphertext.split('/')  # creates list of bytes
-        print(bitlist)  # debug
-        # for bits in bitlist:  # iterator for bytes
-        #     plain += chr(int(bits, 2))  # converts back to char
+        # print(bitlist)  # debug
+        for bits in bitlist:  # iterator for bytes
+            plain += chr(int(bits, 2))  # converts back to char
     return plain
 
 # main body
 
 if __name__ == "__main__":
-    print("Testing Encode function...")
+    print("\n\tTesting Encode function...\n")
     a1 = encode("a")
     print(a1)
     a2 = encode("abc")
@@ -71,8 +71,8 @@ if __name__ == "__main__":
     print(a3)
     a4 = encode("A cat ate 5 eggs @ 10:45!")
     print(a4)
-    print("*" * 30 + "\n\n")
+    print("*" * 30 + "\n\tTesting Decode Function\n")
     print(decode(a1))
-    # print(decode(a2))
-    # print(decode(a3))
-    # print(decode(a4))
+    print(decode(a2))
+    print(decode(a3))
+    print(decode(a4))
