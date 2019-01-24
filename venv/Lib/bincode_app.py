@@ -22,6 +22,6 @@ import bincode
 # main body
 
 if __name__ == "__main__":
-    bin_menu = Menu("Binary Encoder Decoder", ["Encode text", "Decode Binary", "Quit"])
+    bin_menu = menugen.Menu("Binary Encoder Decoder", ["Encode text", "Decode Binary", "Quit"])
     response = bin_menu.display()
     print(response)
