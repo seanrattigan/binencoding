@@ -21,9 +21,9 @@ def encode(plaintext):
     (str)->str
     takes plain text and converts to a binary code format
     >>> encode("b")
-    '1000010'
+    '1100010'
     >>> encode("bad")
-    '1000010/1000001/1100100'
+    '1100010/1100001/1100100'
     """
     if len(plaintext) < 1:
         print("No data detected!")
@@ -31,7 +31,10 @@ def encode(plaintext):
     if type(plaintext) != str:
         raise TypeError("Non-str object cannot be encoded!")
     else:
-        pass
+        cypher = ""
+        for ch in plaintext:
+            cypher += str(bin(ord(ch)))[2:] + "/"
+    return cypher
 
 
 def decode(cyphertext):
