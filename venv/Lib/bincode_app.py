@@ -25,6 +25,11 @@ if __name__ == "__main__":
     bin_menu = menugen.Menu("Binary Encoder Decoder", ["Encode text to binary string", "Decode Binary to text", "Quit"])
     while True:
         response = bin_menu.display()
-        print(response)
-        if response == 2:
+        if response == 0:
+            print("Encode called")
+        elif response == 1:
+            print("Decode called")
+        elif response == 2:
             break
+        else:
+            print("Something strange happened")
