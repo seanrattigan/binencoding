@@ -25,7 +25,14 @@ def encode(plaintext):
     >>> encode("bad")
     '1000010/1000001/1100100'
     """
-    pass
+    if len(plaintext) < 1:
+        print("No data detected!")
+        return ""
+    if type(plaintext) != str:
+        raise TypeError("Non-str object cannot be encoded!")
+    else:
+        pass
+
 
 
 def decode(cyphertext):
