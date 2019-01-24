@@ -34,7 +34,7 @@ def encode(plaintext):
         cypher = ""
         for ch in plaintext:
             cypher += str(bin(ord(ch)))[2:] + "/"
-    return cypher
+    return cypher[:-1]  # to drop the last '/'
 
 
 def decode(cyphertext):
@@ -46,17 +46,23 @@ def decode(cyphertext):
     >>> encode('1000010/1000001/1100100')
     'bad
     """
-    if len(cyphertext) < 1:
-        print("No data detected!")
-        return ""
     if type(cyphertext) != str:
         raise TypeError("Non-str object cannot be encoded!")
+    plain = ""  # initialises empty str
+    if len(cyphertext) < 1:
+        print("No data detected!")
+        return plain
     else:
-        pass
+        bitlist = cyphertext.split('/')  # creates list of bytes
+        print(bitlist)  # debug
+        # for bits in bitlist:  # iterator for bytes
+        #     plain += chr(int(bits, 2))  # converts back to char
+    return plain
 
 # main body
 
 if __name__ == "__main__":
+    print("Testing Encode function...")
     a1 = encode("a")
     print(a1)
     a2 = encode("abc")
@@ -65,3 +71,8 @@ if __name__ == "__main__":
     print(a3)
     a4 = encode("A cat ate 5 eggs @ 10:45!")
     print(a4)
+    print("*" * 30 + "\n\n")
+    print(decode(a1))
+    # print(decode(a2))
+    # print(decode(a3))
+    # print(decode(a4))
