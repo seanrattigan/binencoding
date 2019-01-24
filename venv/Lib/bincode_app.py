@@ -38,7 +38,9 @@ if __name__ == "__main__":
             cyph = bincode.encode(get_string("encode text to binary"))
             print(cyph)
         elif response == 1:
-            print("Decode called")
+            print("Decode called")  # 1100011/1100001/1110100
+            plain = bincode.decode(get_string("decode binary ro text"))
+            print(plain)
         elif response == 2:
             break
         else:
