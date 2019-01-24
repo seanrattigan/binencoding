@@ -62,17 +62,19 @@ def decode(cyphertext):
 # main body
 
 if __name__ == "__main__":
+    # can place all test cases in a single list for testing functions
+    strings = ["a",
+               "abc",
+               "The cat sat on the mat",
+               "A cat ate 5 eggs @ 10:45!"
+               ]
+    bits = []
     print("\n\tTesting Encode function...\n")
-    a1 = encode("a")
-    print(a1)
-    a2 = encode("abc")
-    print(a2)
-    a3 = encode("The cat sat on the mat")
-    print(a3)
-    a4 = encode("A cat ate 5 eggs @ 10:45!")
-    print(a4)
-    print("*" * 30 + "\n\tTesting Decode Function\n")
-    print(decode(a1))
-    print(decode(a2))
-    print(decode(a3))
-    print(decode(a4))
+    for test_str in strings:
+        coded = (encode(test_str))
+        bits.append(coded)  # stores encoded data for decoding later
+        print(coded)   # prints val returned from encode
+
+    print("*" * 30 + "\n\n\tTesting Decode Function\n")
+    for bitstrs in bits:
+        print(decode(bitstrs))
