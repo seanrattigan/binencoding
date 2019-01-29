@@ -16,7 +16,7 @@
 
 
 # functions
-def encode(plaintext, key):
+def encode(plaintext, key="donald"):
     """
     (str, str)->str
     Encodes plaintext as duck text
@@ -24,7 +24,7 @@ def encode(plaintext, key):
     return "Duck encoding called successfully"
 
 
-def decode(plaintext, key):
+def decode(cyphertext, key="donald"):
     """
     (str, str)->str
     Decodes cyphertext from duck text to plaintext
