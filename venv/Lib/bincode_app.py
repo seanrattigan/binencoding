@@ -26,10 +26,11 @@ def get_string(opt="encode"):
     text = input(f"Enter string to {opt}: ")
     return text
 
-
-# main body
-
-if __name__ == "__main__":
+def bin_app():
+    """
+    (None)->None
+    Runs what would otherwise be in main
+    """
     bin_menu = menugen.Menu("Binary Encoder Decoder", ["Encode text to binary string", "Decode Binary to text", "Quit"])
     while True:
         response = bin_menu.display()
@@ -45,3 +46,9 @@ if __name__ == "__main__":
             break
         else:
             print("Something strange happened")
+
+
+# main body
+
+if __name__ == "__main__":
+    pass
