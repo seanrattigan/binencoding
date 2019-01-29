@@ -21,7 +21,7 @@ def encode(plaintext, key="donald"):
     (str, str)->str
     Encodes plaintext as duck text
     """
-    return "Duck encoding called successfully"
+    return "Quack- Duck encoding called successfully"
 
 
 def decode(cyphertext, key="donald"):
@@ -29,7 +29,7 @@ def decode(cyphertext, key="donald"):
     (str, str)->str
     Decodes cyphertext from duck text to plaintext
     """
-    return "Duck decoding called successfully"
+    return "Quack- Duck decoding called successfully"
 
 # main body
 
