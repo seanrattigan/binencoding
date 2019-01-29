@@ -21,5 +21,16 @@ import bincode_app as bin
 
 # main body
 
+
 if __name__ == "__main__":
-    pass
+    bin_menu = menugen.Menu("Master Program", ["Work with bincoding", "Work with duckoding", "Quit"])
+    while True:
+        response = bin_menu.display()
+        if response == 0:
+            print("bincoder app call")
+        elif response == 1:
+            print("duckoder app call")
+        elif response == 2:
+            break
+        else:
+            print("Something strange happened")
