@@ -28,9 +28,11 @@ if __name__ == "__main__":
     while True:
         response = bin_menu.display()
         if response == 0:
-            print("bincoder app call")
+            # print("bincoder app call")
+            bin.bin_app()
         elif response == 1:
-            print("duckoder app call")
+            # print("duckoder app call")
+            duk.duk_app()
         elif response == 2:
             break
         else:
