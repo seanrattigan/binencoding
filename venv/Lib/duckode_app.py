@@ -27,15 +27,17 @@ def get_string(opt=""):
     return text
 
 
-# main body
+def duk_app():
+    """
 
-if __name__ == "__main__":
+    :return:
+    """
     bin_menu = menugen.Menu("Duck Encoder Decoder", ["Encode text to duckspeak", "Decode duckspeak to text", "Quit"])
     while True:
         response = bin_menu.display()
         if response == 0:
             print("Encode to duck called")  # may be commented out afterwards?
-            cyph = duckode.encode(get_string("to encode text to duck"), get_string("for key"),  )
+            cyph = duckode.encode(get_string("to encode text to duck"), get_string("for key"), )
             print(cyph)
         elif response == 1:
             print("Decode called")  # may be commented out afterwards?
@@ -45,3 +47,8 @@ if __name__ == "__main__":
             break
         else:
             print("Something strange happened")
+
+# main body
+
+if __name__ == "__main__":
+    pass
