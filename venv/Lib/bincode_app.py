@@ -13,6 +13,7 @@
 import menugen
 import bincode
 
+
 # globals and constants
 
 
@@ -25,6 +26,7 @@ def get_string(opt="encode"):
     """
     text = input(f"Enter string to {opt}: ")
     return text
+
 
 def bin_app():
     """

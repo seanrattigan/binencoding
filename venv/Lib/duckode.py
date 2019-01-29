@@ -31,6 +31,7 @@ def decode(cyphertext, key="donald"):
     """
     return "Quack- Duck decoding called successfully"
 
+
 # main body
 
 if __name__ == "__main__":

@@ -59,6 +59,7 @@ def decode(cyphertext):
             plain += chr(int(bits, 2))  # converts back to char
     return plain
 
+
 # main body
 
 if __name__ == "__main__":

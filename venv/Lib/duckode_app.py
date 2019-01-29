@@ -13,6 +13,7 @@
 import menugen
 import duckode
 
+
 # globals and constants
 
 
@@ -47,6 +48,7 @@ def duk_app():
             break
         else:
             print("Something strange happened")
+
 
 # main body
 

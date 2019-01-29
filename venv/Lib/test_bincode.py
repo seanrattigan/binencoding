@@ -33,7 +33,7 @@ if __name__ == "__main__":
     for test_str in strings:
         coded = (encode(test_str))
         bits.append(coded)  # stores encoded data for decoding later
-        print(coded)   # prints val returned from encode
+        print(coded)  # prints val returned from encode
 
     print("*" * 30 + "\n\n\tTesting Decode Function\n")
     for bitstrs in bits:
