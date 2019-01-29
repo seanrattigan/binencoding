@@ -10,6 +10,7 @@
 # ==================================================================
 
 # imports
+import menugen
 import duckode_app as duk
 import bincode_app as bin
 
